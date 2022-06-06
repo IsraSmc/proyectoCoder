@@ -1,0 +1,234 @@
+.headerTitle {
+    background-color: black; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: relative;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:large;
+    grid-area: headerTitle;
+    padding: 5vh;
+}
+
+.headerTitle__font {
+    box-shadow: none;
+    text-decoration: none;
+    color: white; 
+}
+
+.headerTitle__font__logo{
+    box-shadow: none;
+    text-decoration: none;
+    color: white; 
+    font-size: xx-large;
+    background-color: rgba(128, 128, 128, 0.308);
+    padding: 7px 13px;
+}
+
+.body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.imagen_modelo{ 
+    width: 22rem;
+    float: right;
+    grid-area: imagen_modelo;
+}
+
+.titulo{
+    background-color: grey;
+    color: rgba(255, 255, 255, 0.733);
+    align-content: center;
+    padding-top: 1.2vh;
+    padding-bottom: 1.2vh;
+    margin: 0px;
+    grid-area: titulo;
+    
+}
+
+p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.footer{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    bottom: 0px;
+    width: 100%;
+    position: fixed;
+}
+
+.informacion{
+    margin-top: 8vh;
+    grid-area: informacion;
+}
+
+#grid{
+    display: grid;
+    grid-template-areas: 
+        "headerTitle headerTitle"
+        "titulo imagen_modelo"
+        "informacion imagen_modelo";
+    
+    grid-template-columns: auto 22rem;
+    grid-template-rows: 5.5rem 2.5rem 29rem;
+}
+
+.imagen_productoA{
+    grid-area: productoA;
+}
+
+.imagen_productoB{
+    grid-area: productoB;
+}
+
+.imagen_productoC{
+    grid-area: productoC;
+}
+
+.descripcionA{
+    grid-area: descripcionA;
+    color: rgba(255, 255, 255, 0.733);
+    background-color: gray;
+    padding: 5vh 2vh 5vh 2vh;
+}
+
+.descripcionB{
+    grid-area: descripcionB;
+    color: rgba(255, 255, 255, 0.733);
+    background-color: gray;
+    padding: 5vh 2vh 5vh 2vh;
+}
+
+.descripcionC{
+    grid-area: descripcionC;
+    color: rgba(255, 255, 255, 0.733);
+    background-color: gray;
+    padding: 3vh 2vh 3vh 2vh;
+}
+
+#grillaProductos{
+    margin-top: 5vh;
+    margin-left: 4vh;
+    margin-right: 4vh;
+    display: grid;
+    grid-template-areas: "productoA productoB productoC"
+        "descripcionA descripcionB descripcionC";
+
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 3fr;
+    grid-template-rows: 37vh 15vh;
+    grid-gap: 5vh;
+    
+}
+
+@media screen and (max-width: 480px){
+    #grid{
+        grid-template-areas:
+        "headerTitle"
+        "titulo"
+        "image_modelo"
+        "informacion"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        padding: 0px;
+    }
+    
+    #grillaProductos{
+        grid-template-areas: "productoA"
+        "descripcionA"
+        "productoB"
+        "descripcionB"
+        "productoC"
+        "descripcionC";
+        grid-template-columns: 1fr;
+        grid-template-rows: 37vh 10vh 37vh 10vh 40vh 10vh;
+        grid-gap: 2vh;
+        margin-bottom: 7vh;
+    }
+
+    .headerTitle{
+        padding: 2vh;
+        font-size: small;
+        
+    }
+
+    .headerTitle__font__logo{
+        font-size:larger;
+        padding: 2px 7px;
+    }
+
+    .imagen_modelo{
+        size: 100vh;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .descripcionA{
+        padding-left: 5vh;
+        padding-right: 5vh;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+
+    .descripcionB{
+        padding-left: 5vh;
+        padding-right: 5vh;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+
+    .descripcionC{
+        padding-left: 4vh;
+        padding-right: 4vh;
+        padding-top: 1vh;
+        padding-bottom: 2vh;
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    #grid{
+        grid-template-rows: auto 2vh auto auto;
+    }
+    
+    #grillaProductos{
+        grid-template-areas: "productoA productoB"
+        "descripcionA descripcionB";
+        grid-template-columns: 2fr;
+        grid-template-rows: 28vh 10vh ;
+        grid-gap: 2vh;
+        margin-left: 2vh;
+        margin-right: 2vh;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .descripcionA{
+        padding: 4vh;
+    }
+
+    .descripcionB{
+        padding: 4vh;
+    }
+
+    .imagen_ProductoA{
+        size: 15vh;
+    }
+
+    .imagen_ProductoB{
+        size: 15vh;
+    }
+    
+    .imagen_ProductoC{
+        display: none;
+    }
+
+    .descripcionC{
+        display: none;
+    }
+}
