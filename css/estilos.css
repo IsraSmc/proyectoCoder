@@ -1,5 +1,4 @@
 .headerTitle {
-    background-color: black; 
     display: flex; 
     flex-direction: row; 
     justify-content: space-between; 
@@ -9,6 +8,7 @@
     font-size:large;
     grid-area: headerTitle;
     padding: 5vh;
+    background-color: black; 
 }
 
 .headerTitle__font {
@@ -38,7 +38,8 @@
 }
 
 .titulo{
-    background-color: grey;
+    background: rgb(74,74,74);
+    background: linear-gradient(90deg, rgba(74,74,74,1) 56%, rgba(255,255,255,1) 93%); 
     color: rgba(255, 255, 255, 0.733);
     align-content: center;
     padding-top: 1.2vh;
@@ -232,3 +233,5 @@ p{
         display: none;
     }
 }
+
+
