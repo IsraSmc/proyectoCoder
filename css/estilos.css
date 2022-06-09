@@ -7,7 +7,7 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size:large;
     grid-area: headerTitle;
-    padding: 5vh;
+    padding: 4.8vh;
     background-color: black; 
 }
 
@@ -47,8 +47,8 @@
     padding-top: 1.2vh;
     padding-bottom: 1.2vh;
     margin: 0px;
+    padding-left: 7px;
     grid-area: titulo;
-    
 }
 
 p{
@@ -113,6 +113,10 @@ p{
     padding: 3vh 2vh 3vh 2vh;
 }
 
+/* INFORMACION*/
+
+
+
 #grillaProductos{
     margin-top: 5vh;
     margin-left: 4vh;
@@ -120,10 +124,9 @@ p{
     display: grid;
     grid-template-areas: "productoA productoB productoC"
         "descripcionA descripcionB descripcionC";
-
     justify-items: center;
     align-items: center;
-    grid-template-columns: 3fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 37vh 15vh;
     grid-gap: 5vh;
     
@@ -202,6 +205,7 @@ p{
     opacity: 1;
     }
 }
+
 @keyframes imagen_modelo {
     0% {
     opacity: 0;
@@ -212,16 +216,14 @@ p{
 }
 
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 560px) and (max-width: 850px){
 
     #grid{
         grid-template-rows: auto 2vh auto auto;
     }
     
     #grillaProductos{
-        grid-template-areas: "productoA productoB"
-        "descripcionA descripcionB";
-        grid-template-columns: 2fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 28vh 10vh ;
         grid-gap: 2vh;
         margin-left: 2vh;
