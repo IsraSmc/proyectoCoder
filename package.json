@@ -1,0 +1,19 @@
+{
+  "name": "comission36360",
+  "version": "1.0.0",
+  "description": "paquete Sass para el curso",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsraSmc/proyectoCoder.git"
+  },
+  "author": "Israel Mamani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IsraSmc/proyectoCoder/issues"
+  },
+  "homepage": "https://github.com/IsraSmc/proyectoCoder#readme"
+}

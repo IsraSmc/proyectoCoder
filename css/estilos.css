@@ -1,3 +1,7 @@
+.body{
+    background-color: rgb(192, 192, 192);
+}
+
 .headerTitle {
     display: flex; 
     flex-direction: row; 
@@ -80,7 +84,7 @@ p{
     grid-template-rows: 5.5rem 2.5rem 29rem;
 }
 
-.imagen_productoA{
+#carouselPulsera{
     grid-area: productoA;
 }
 
@@ -113,9 +117,107 @@ p{
     padding: 3vh 2vh 3vh 2vh;
 }
 
+/* MUJER */
+
+.carteraMujer{
+    width: 250px;
+    height: 220px;
+}
+
+.infoDeCarteraV{
+    grid-area: infoDeCarteraV;
+    line-height: 5px;
+    align-self: center;
+    text-align: left center;
+}
+
+.infoDeCarteraWaffle{
+    grid-area: infoDeCarteraWaffle;
+    justify-self: right;
+    line-height: 5px;
+}
+
+.infoDeCarteraCiervo{
+    grid-area: infoDeCarteraCiervo;
+    justify-self: left;
+    line-height: 5px;
+    align-self: center;
+    text-align: left center;
+}
+
+.infoDeCarteraCuadro{
+    grid-area: infoDeCarteraCuadro;
+    justify-self: right;
+    line-height: 5px;
+}
+
+#carouselCarteraV{
+    justify-self: center;
+    grid-area: carteraV;
+}
+
+#carouselCarteraWaffle{
+    grid-area: carteraWaffle;
+    justify-self: center;
+}
+
+#carouselCarteraCiervo{
+    grid-area: carteraCiervo;
+    justify-self: center;
+}
+
+#carouselCarteraCuadro{
+    grid-area: carteraCuadro;
+    justify-self: center;
+}
+
+#grillaProductosMujer{
+    display: grid;
+    grid-template-areas: 
+        "infoDeCarteraV infoDeCarteraV carteraV"
+        "carteraWaffle infoDeCarteraWaffle infoDeCarteraWaffle"
+        "infoDeCarteraCiervo infoDeCarteraCiervo carteraCiervo"
+        "carteraCuadro infoDeCarteraCuadro infoDeCarteraCuadro";
+        
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 250px 250px 250px 250px;
+    align-items: center;
+    justify-self: center;
+    margin: 6%;
+}
+
+#grillaProductosMujer .tituloM{
+    color: white;
+    font-size: x-large;
+    text-shadow: black 0.1em;
+}
+/* FIN DE MUJER*/
+
 /* INFORMACION*/
+#ubicacion{
+    display: grid;
+    grid-template-areas: 
+        "mapa"
+        "info";
+    grid-template-columns: 100%;
+    grid-template-rows: 450px 300px;
+    margin: 3vh;
+    padding: 2vh;
+}
+
+#ubicacion .mapa{
+    grid-area: mapa;
+    justify-self: center;
+}
+
+#ubicacion .ubicacion-Informacion{
+    grid-area: info;
+    justify-self: left;
+    font-size: large;
+}
 
 
+/* FIN DE INFORMACION*/
 
 #grillaProductos{
     margin-top: 5vh;
@@ -194,6 +296,46 @@ p{
         padding-right: 4vh;
         padding-top: 1vh;
         padding-bottom: 2vh;
+    }
+
+    /*INFORMACION*/
+    #mapa-aspecto{
+        width: 350px;
+        height: 300px;
+    }
+
+    #ubicacion{
+        grid-template-rows: 350px 300px;
+    }
+
+    /*FIN INFORMACION*/
+
+    /*MUJER*/
+    #grillaProductosMujer{
+        grid-template-areas: 
+        "carteraV"
+        "infoDeCarteraV"
+        "carteraWaffle"
+        "infoDeCarteraWaffle"
+        "carteraCiervo"
+        "infoDeCarteraCiervo"
+        "carteraCuadro"
+        "infoDeCarteraCuadro";
+        grid-template-columns: 1fr;
+        grid-template-rows: 37vh 10vh 37vh 10vh 37vh 10vh 37vh 10vh;
+        padding-bottom: 10vh;
+        justify-items: center;
+        align-items: center;
+    }
+
+
+    /*FIN MUJER*/
+    .navegacion{
+        display: flex;
+        position: right;
+        margin: 0px;
+        align-items: center;
+        justify-items: left;
     }
 }
 
