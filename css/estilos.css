@@ -11,8 +11,47 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size:large;
     grid-area: headerTitle;
-    padding: 4.8vh;
     background-color: black; 
+}
+
+.navegacion{
+    display: flex;
+    padding-right: 30px;
+    flex-direction: column;
+}
+
+.imgMochilas{
+    width: 15rem;
+}
+
+.mochilas{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    background-color: gray;
+    padding: 25px;
+}
+
+.barraDeNavegacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: headerTitle;
+    padding: 4.8vh;
+    font-size: large;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.barraDeNavegacion a{
+    padding-right: 20px;
+    font-weight: 500;
 }
 
 .headerTitle__font {
@@ -41,6 +80,8 @@
     grid-area: imagen_modelo;
     -webkit-animation: imagen_modelo 1.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: imagen_modelo 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    position:initial;
+    margin-top: 0px;
 }
 
 .titulo{
@@ -82,17 +123,19 @@ p{
     
     grid-template-columns: auto 22rem;
     grid-template-rows: 5.5rem 2.5rem 29rem;
+
+    margin-bottom: 20px;
 }
 
 #carouselPulsera{
     grid-area: productoA;
 }
 
-.imagen_productoB{
+#carouselPulseraBrillante{
     grid-area: productoB;
 }
 
-.imagen_productoC{
+#carouselBandolera{
     grid-area: productoC;
 }
 
@@ -243,10 +286,19 @@ p{
         "informacion"
         ;
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: 90px 47px auto auto;
         padding: 0px;
     }
     
+    .mochilas{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgMochilas{
+        padding-bottom: 10px;
+    }
+
     #grillaProductos{
         grid-template-areas: "productoA"
         "descripcionA"
@@ -261,9 +313,16 @@ p{
     }
 
     .headerTitle{
-        padding: 2vh;
-        font-size: small;
-        
+        padding: 0.9vh;
+        font-size: larger;
+        align-self: center;
+        flex-direction: column;
+
+    }
+
+    .barraDeNavegacion{
+        margin-top: 0px;
+        padding: 1.5vh;
     }
 
     .headerTitle__font__logo{
@@ -275,7 +334,9 @@ p{
         size: 100vh;
         margin: 0px;
         padding: 0px;
+        float:none;
     }
+
 
     .descripcionA{
         padding-left: 5vh;
@@ -361,9 +422,17 @@ p{
 @media screen and (min-width: 560px) and (max-width: 850px){
 
     #grid{
-        grid-template-rows: auto 2vh auto auto;
+        grid-template-rows: 100px 2vh auto 18vh;
     }
-    
+
+    #mochMedida{
+        display: none;
+    }
+
+    #mochBolsillos{
+        display: none;
+    }
+
     #grillaProductos{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 28vh 10vh ;
