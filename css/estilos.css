@@ -14,6 +14,9 @@
     background-color: black; 
 }
 
+/* exclusivo de index*/
+
+/*
 .navegacion{
     display: flex;
     padding-right: 30px;
@@ -24,6 +27,28 @@
     width: 15rem;
 }
 
+.imagen_modelo{ 
+    width: 22rem;
+    float: right;
+    grid-area: imagen_modelo;
+    -webkit-animation: imagen_modelo 1.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: imagen_modelo 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    position:initial;
+    margin-top: 0px;
+}
+
+.titulo{
+    background: rgb(74,74,74);
+    background: linear-gradient(90deg, rgba(74,74,74,1) 56%, rgba(255,255,255,1) 93%); 
+    color: rgba(255, 255, 255, 0.733);
+    align-content: center;
+    padding-top: 1.2vh;
+    padding-bottom: 1.2vh;
+    margin: 0px;
+    padding-left: 7px;
+    grid-area: titulo;
+}
+
 .mochilas{
     display: flex;
     flex-direction: row;
@@ -31,6 +56,24 @@
     background-color: gray;
     padding: 25px;
 }
+
+.informacion{
+    margin-top: 8vh;
+    grid-area: informacion;
+}
+
+#grid{
+    display: grid;
+    grid-template-areas: 
+        "headerTitle headerTitle"
+        "titulo imagen_modelo"
+        "informacion imagen_modelo";
+    
+    grid-template-columns: auto 22rem;
+    grid-template-rows: 5.5rem 2.5rem 29rem;
+    margin-bottom: 20px;
+}
+*/
 
 .barraDeNavegacion{
     display: flex;
@@ -74,28 +117,6 @@ a{
     padding: 0px;
 }
 
-.imagen_modelo{ 
-    width: 22rem;
-    float: right;
-    grid-area: imagen_modelo;
-    -webkit-animation: imagen_modelo 1.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation: imagen_modelo 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    position:initial;
-    margin-top: 0px;
-}
-
-.titulo{
-    background: rgb(74,74,74);
-    background: linear-gradient(90deg, rgba(74,74,74,1) 56%, rgba(255,255,255,1) 93%); 
-    color: rgba(255, 255, 255, 0.733);
-    align-content: center;
-    padding-top: 1.2vh;
-    padding-bottom: 1.2vh;
-    margin: 0px;
-    padding-left: 7px;
-    grid-area: titulo;
-}
-
 p{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -107,24 +128,6 @@ p{
     bottom: 0px;
     width: 100%;
     position: fixed;
-}
-
-.informacion{
-    margin-top: 8vh;
-    grid-area: informacion;
-}
-
-#grid{
-    display: grid;
-    grid-template-areas: 
-        "headerTitle headerTitle"
-        "titulo imagen_modelo"
-        "informacion imagen_modelo";
-    
-    grid-template-columns: auto 22rem;
-    grid-template-rows: 5.5rem 2.5rem 29rem;
-
-    margin-bottom: 20px;
 }
 
 #carouselPulsera{
