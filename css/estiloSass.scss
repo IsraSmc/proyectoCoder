@@ -74,14 +74,7 @@
     margin-bottom: 20px;
 
     .titulo{
-        background: rgb(74,74,74);
-        background: linear-gradient(90deg, rgba(74,74,74,1) 56%, rgba(255,255,255,1) 93%); 
-        color: rgba(255, 255, 255, 0.733);
-        align-content: center;
-        padding-top: 1.2vh;
-        padding-bottom: 1.2vh;
-        margin: 0px;
-        padding-left: 7px;
+        @extend .titulo;
         grid-area: titulo;
     }
 
@@ -154,35 +147,20 @@ $Cartera:(
             line-height: 5px;
         }
     }
-}
 
-#carouselCarteraV{
-    justify-self: center;
-    grid-area: carteraV;
-}
-
-#carouselCarteraWaffle{
-    grid-area: carteraWaffle;
-    justify-self: center;
-}
-
-#carouselCarteraCiervo{
-    grid-area: carteraCiervo;
-    justify-self: center;
-}
-
-#carouselCarteraCuadro{
-    grid-area: carteraCuadro;
-    justify-self: center;
+    #carousel#{$cartera}{
+        grid-area: #{$cartera};
+        justify-self: center;
+    }
 }
 
 #grillaProductosMujer{
     display: grid;
     grid-template-areas: 
-        "infoDeCarteraV infoDeCarteraV carteraV"
-        "carteraWaffle infoDeCarteraWaffle infoDeCarteraWaffle"
-        "infoDeCarteraCiervo infoDeCarteraCiervo carteraCiervo"
-        "carteraCuadro infoDeCarteraCuadro infoDeCarteraCuadro";
+        "infoDeCarteraV infoDeCarteraV CarteraV"
+        "CarteraWaffle infoDeCarteraWaffle infoDeCarteraWaffle"
+        "infoDeCarteraCiervo infoDeCarteraCiervo CarteraCiervo"
+        "CarteraCuadro infoDeCarteraCuadro infoDeCarteraCuadro";
         
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 250px 250px 250px 250px;

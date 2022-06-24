@@ -47,7 +47,7 @@
   flex-direction: column;
 }
 
-.titulo {
+.titulo, #grid .titulo {
   background: rgb(74, 74, 74);
   background: linear-gradient(90deg, rgb(74, 74, 74) 56%, rgb(255, 255, 255) 93%);
   color: rgba(255, 255, 255, 0.733);
@@ -67,14 +67,6 @@
   margin-bottom: 20px;
 }
 #grid .titulo {
-  background: rgb(74, 74, 74);
-  background: linear-gradient(90deg, rgb(74, 74, 74) 56%, rgb(255, 255, 255) 93%);
-  color: rgba(255, 255, 255, 0.733);
-  align-content: center;
-  padding-top: 1.2vh;
-  padding-bottom: 1.2vh;
-  margin: 0px;
-  padding-left: 7px;
   grid-area: titulo;
 }
 #grid .imagen_modelo {
@@ -122,10 +114,20 @@
   text-align: left center;
 }
 
+#carouselCarteraV {
+  grid-area: CarteraV;
+  justify-self: center;
+}
+
 .infoDeCarteraWaffle {
   grid-area: infoDeCarteraWaffle;
   justify-self: right;
   line-height: 5px;
+}
+
+#carouselCarteraWaffle {
+  grid-area: CarteraWaffle;
+  justify-self: center;
 }
 
 .infoDeCarteraCiervo {
@@ -135,35 +137,25 @@
   text-align: left center;
 }
 
+#carouselCarteraCiervo {
+  grid-area: CarteraCiervo;
+  justify-self: center;
+}
+
 .infoDeCarteraCuadro {
   grid-area: infoDeCarteraCuadro;
   justify-self: right;
   line-height: 5px;
 }
 
-#carouselCarteraV {
-  justify-self: center;
-  grid-area: carteraV;
-}
-
-#carouselCarteraWaffle {
-  grid-area: carteraWaffle;
-  justify-self: center;
-}
-
-#carouselCarteraCiervo {
-  grid-area: carteraCiervo;
-  justify-self: center;
-}
-
 #carouselCarteraCuadro {
-  grid-area: carteraCuadro;
+  grid-area: CarteraCuadro;
   justify-self: center;
 }
 
 #grillaProductosMujer {
   display: grid;
-  grid-template-areas: "infoDeCarteraV infoDeCarteraV carteraV" "carteraWaffle infoDeCarteraWaffle infoDeCarteraWaffle" "infoDeCarteraCiervo infoDeCarteraCiervo carteraCiervo" "carteraCuadro infoDeCarteraCuadro infoDeCarteraCuadro";
+  grid-template-areas: "infoDeCarteraV infoDeCarteraV CarteraV" "CarteraWaffle infoDeCarteraWaffle infoDeCarteraWaffle" "infoDeCarteraCiervo infoDeCarteraCiervo CarteraCiervo" "CarteraCuadro infoDeCarteraCuadro infoDeCarteraCuadro";
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 250px 250px 250px 250px;
   align-items: center;
