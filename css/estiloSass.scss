@@ -43,8 +43,6 @@
     padding: 1rem;
     bottom: 0px;
     width: 100%;
-    position: fixed;
-
     .navegacion{
         display: flex;
         padding-right: 30px;
@@ -120,6 +118,17 @@
 
 /* Mujer */
 
+/*Atributos*/
+
+$Cartera:(
+    "CarteraV" : 0,
+    "CarteraWaffle" : 1,
+    "CarteraCiervo" : 0,
+    "CarteraCuadro" : 1
+);
+
+/* Fin de atributos*/
+
 .infoM{
     margin: 50px 200px;
 }
@@ -129,31 +138,22 @@
     height: 220px;
 }
 
-.infoDeCarteraV{
-    grid-area: infoDeCarteraV;
-    line-height: 5px;
-    align-self: center;
-    text-align: left center;
-}
-
-.infoDeCarteraWaffle{
-    grid-area: infoDeCarteraWaffle;
-    justify-self: right;
-    line-height: 5px;
-}
-
-.infoDeCarteraCiervo{
-    grid-area: infoDeCarteraCiervo;
-    justify-self: left;
-    line-height: 5px;
-    align-self: center;
-    text-align: left center;
-}
-
-.infoDeCarteraCuadro{
-    grid-area: infoDeCarteraCuadro;
-    justify-self: right;
-    line-height: 5px;
+@each $cartera, $var in $Cartera {
+    @if $var == 0 {
+        .infoDe#{$cartera} {
+            grid-area: infoDe#{$cartera};
+            line-height: 5px;
+            align-self: center;
+            text-align: left center;
+        } 
+    }
+    @else {
+        .infoDe#{$cartera} {
+            grid-area: infoDe#{$cartera};
+            justify-self: right;
+            line-height: 5px;
+        }
+    }
 }
 
 #carouselCarteraV{
