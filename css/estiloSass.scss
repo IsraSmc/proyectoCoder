@@ -120,6 +120,13 @@ $Cartera:(
     "CarteraCuadro" : 1
 );
 
+@mixin fondoBox ($width, $height, $left){
+    background-color: gray;
+    margin: 0px 0px;
+    padding: $width $height;
+    padding-left: $left;
+}
+
 /* Fin de atributos*/
 
 .infoM{
@@ -131,6 +138,8 @@ $Cartera:(
     height: 220px;
 }
 
+
+
 @each $cartera, $var in $Cartera {
     @if $var == 0 {
         .infoDe#{$cartera} {
@@ -138,6 +147,7 @@ $Cartera:(
             line-height: 5px;
             align-self: center;
             text-align: left center;
+            @include fondoBox(35px, 30px, 35px)
         } 
     }
     @else {
@@ -145,6 +155,7 @@ $Cartera:(
             grid-area: infoDe#{$cartera};
             justify-self: right;
             line-height: 5px;
+            @include fondoBox(40px, 30px, 10.5vh)
         }
     }
 
@@ -167,6 +178,7 @@ $Cartera:(
     align-items: center;
     justify-self: center;
     margin: 6%;
+    padding: 0px;
 }
 
 #grillaProductosMujer .tituloM{
@@ -240,16 +252,29 @@ $Cartera:(
             padding-bottom: 10px;
         }
     }
+    @each $cartera, $var in $Cartera {
+        .infoDe#{$cartera} {
+            @include fondoBox(10px, 20px, 10px);
+            align-self:center;
+        } 
+    }
+
+    @mixin fondoBox ($width, $height, $left){
+        background-color: gray;
+        margin: 0px 0px;
+        padding: $width $height;
+        padding-left: $left;
+    }
 
     #grillaProductosMujer{
         grid-template-areas: 
-        "carteraV"
+        "CarteraV"
         "infoDeCarteraV"
-        "carteraWaffle"
+        "CarteraWaffle"
         "infoDeCarteraWaffle"
-        "carteraCiervo"
+        "CarteraCiervo"
         "infoDeCarteraCiervo"
-        "carteraCuadro"
+        "CarteraCuadro"
         "infoDeCarteraCuadro";
         grid-template-columns: 1fr;
         grid-template-rows: 37vh 10vh 37vh 10vh 37vh 10vh 37vh 10vh;
@@ -261,6 +286,8 @@ $Cartera:(
     .infoM{
         margin: 10px 20px;
     }
+
+    
 
     .navegacion{
         display: flex;
@@ -307,4 +334,11 @@ $Cartera:(
 a{
     text-decoration: none;
     color: white;
+}
+
+@mixin fondoBox ($width, $height, $left){
+    background-color: gray;
+    margin: 0px 0px;
+    padding: $width $height;
+    padding-left: $left;
 }
