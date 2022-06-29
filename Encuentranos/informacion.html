@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informacion y ubicacion</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estiloSass.css  ">
     <link rel="stylesheet" href="https://fonts.google.com/">
     <meta name="keywords" content="informacion, localizacion, local">
     <meta name="description" content="Localización del local, horarios y atención al público">
 </head>
 <body class="body">
     <header class="headerTitle">
-        <div>
-            <a href="../index.html" class="headerTitle__font__logo">SAGER</a>
-        </div>
-        <nav class="barraDeNavegacion">
-            <a href="../Articulos/hombre.html" class="headerTitle__font">HOMBRE</a>
-            <a href="../Articulos/mujer.html" class="headerTitle__font">MUJER</a>
-            <a href="../Encuentranos/informacion.html" class="headerTitle__font">DONDE ENCONTRARNOS</a>
-            <a href="../Comentarios/comentarios.html" class="headerTitle__font">COMENTARIOS</a>
-        </nav> 
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">SAGER</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="hom" aria-current="page" href="../Articulos/hombre.html">HOMBRE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Articulos/mujer.html">MUJER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Encuentranos/informacion.html">DONDE ENCOTRARNOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Comentarios/comentarios.html">COMENTARIOS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <section id="ubicacion">
@@ -32,7 +48,7 @@
             <p>Horarios de atención: 8:00 - 16:00</p>
         </list>
     </section>
-    
+    <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 <footer class="footer"> Israel Mamani </footer>

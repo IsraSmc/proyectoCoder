@@ -4,33 +4,32 @@
 
 /* GENERAL */
 .headerTitle {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: large;
-  grid-area: headerTitle;
   background-color: black;
   padding-left: 20px;
   padding: 25px;
 }
-.headerTitle__font__logo {
+.headerTitle .container-fluid {
+  display: flex;
+  justify-content: space-between;
+}
+.headerTitle .navbar-brand {
   box-shadow: none;
   text-decoration: none;
   color: white;
-  font-size: xx-large;
+  font-size: x-large;
   background-color: rgba(128, 128, 128, 0.308);
   padding: 7px 13px;
 }
-.headerTitle .barraDeNavegacion a {
-  padding-right: 20px;
-  font-weight: 500;
+.headerTitle .navbar-nav {
+  background-color: black;
+  margin: 0px;
 }
-.headerTitle .barraDeNavegacion a .headerTitle__font {
-  box-shadow: none;
-  text-decoration: none;
+.headerTitle .navbar-nav #hom {
+  color: white;
+}
+.headerTitle .navbar-nav a {
   color: white;
 }
 
@@ -61,9 +60,9 @@
 /* Index */
 #grid {
   display: grid;
-  grid-template-areas: "headerTitle headerTitle" "titulo imagen_modelo" "informacion imagen_modelo";
+  grid-template-areas: "titulo imagen_modelo" "informacion imagen_modelo";
   grid-template-columns: auto 22rem;
-  grid-template-rows: 5.5rem 2.5rem 29rem;
+  grid-template-rows: 2.5rem 29rem;
   margin-bottom: 20px;
 }
 #grid .titulo {
@@ -95,6 +94,54 @@
 }
 
 /* FIN INDEX*/
+/* HOMBRE */
+#carouselPulsera {
+  grid-area: productoA;
+}
+
+#carouselPulseraBrillante {
+  grid-area: productoB;
+}
+
+#carouselBandolera {
+  grid-area: productoC;
+}
+
+.descripcionA {
+  grid-area: descripcionA;
+  color: rgba(255, 255, 255, 0.733);
+  background-color: gray;
+  padding: 5vh 2vh 5vh 2vh;
+}
+
+.descripcionB {
+  grid-area: descripcionB;
+  color: rgba(255, 255, 255, 0.733);
+  background-color: gray;
+  padding: 5vh 2vh 5vh 2vh;
+}
+
+.descripcionC {
+  grid-area: descripcionC;
+  color: rgba(255, 255, 255, 0.733);
+  background-color: gray;
+  padding: 3vh 2vh 3vh 2vh;
+}
+
+#grillaProductos {
+  margin-top: 5vh;
+  margin-left: 4vh;
+  margin-right: 4vh;
+  display: grid;
+  grid-template-areas: "productoA productoB productoC" "descripcionA descripcionB descripcionC";
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 37vh 15vh;
+  grid-gap: 5vh;
+}
+
+/* FIN DE HOMBRE */
 /* Mujer */
 /*Atributos*/
 /* Fin de atributos*/
@@ -186,41 +233,44 @@
   text-shadow: black 0.1em;
 }
 
+/* FIN DE MUJER*/
+/* INFORMACION */
+#ubicacion {
+  display: grid;
+  grid-template-areas: "mapa" "info";
+  grid-template-columns: 100%;
+  grid-template-rows: 450px 300px;
+  margin: 3vh;
+  padding: 2vh;
+}
+#ubicacion .mapa {
+  grid-area: mapa;
+  justify-self: center;
+}
+#ubicacion .ubicacion-Informacion {
+  grid-area: info;
+  justify-self: left;
+  font-size: large;
+}
+
 @media screen and (max-width: 480px) {
   .headerTitle {
-    padding: 0.9vh;
     font-size: larger;
     align-self: center;
-    flex-direction: column;
+    flex-direction: row;
+    padding: 20px;
   }
   .headerTitle__font__logo {
     font-size: larger;
     padding: 2px 7px;
   }
-  .headerTitle .barraDeNavegacion {
-    margin-top: 0px;
-    padding: 1.5vh;
-  }
 
   #grid {
-    grid-template-areas: "headerTitle" "titulo" "image_modelo" "informacion";
+    grid-template-areas: "titulo" "image_modelo" "informacion";
     grid-template-columns: 1fr;
-    grid-template-rows: 90px 47px auto auto;
-    padding: 0px;
-  }
-  #grid .headerTitle {
-    padding: 0.9vh;
-    font-size: larger;
-    align-self: center;
+    grid-template-rows: 47px auto auto;
     flex-direction: column;
-  }
-  #grid .headerTitle__font__logo {
-    font-size: larger;
-    padding: 2px 7px;
-  }
-  #grid .headerTitle .barraDeNavegacion {
-    margin-top: 0px;
-    padding: 1.5vh;
+    padding: 0px;
   }
   #grid .imagen_modelo {
     size: 100vh;
@@ -237,6 +287,37 @@
     padding-bottom: 10px;
   }
 
+  /* HOMBRE */
+  #grillaProductos {
+    grid-template-areas: "productoA" "descripcionA" "productoB" "descripcionB" "productoC" "descripcionC";
+    grid-template-columns: 1fr;
+    grid-template-rows: 37vh 10vh 37vh 10vh 40vh 10vh;
+    grid-gap: 2vh;
+    margin-bottom: 7vh;
+  }
+
+  .descripcionA {
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+  }
+
+  .descripcionB {
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+  }
+
+  .descripcionC {
+    padding-left: 4vh;
+    padding-right: 4vh;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+  }
+
+  /*MUJER*/
   .infoDeCarteraV {
     background-color: gray;
     margin: 0px 0px;
@@ -282,6 +363,16 @@
     margin: 10px 20px;
   }
 
+  /*INFORMACION*/
+  #mapa-aspecto {
+    width: 350px;
+    height: 300px;
+  }
+
+  #ubicacion {
+    grid-template-rows: 350px 300px;
+  }
+
   .navegacion {
     display: flex;
     position: right;
@@ -316,6 +407,41 @@
   }
 
   #mochBolsillos {
+    display: none;
+  }
+
+  #grillaProductos {
+    grid-template-areas: "productoA productoB" "descripcionA descripcionB";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 28vh 10vh;
+    grid-gap: 2vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .descripcionA {
+    padding: 4vh;
+  }
+
+  .descripcionB {
+    padding: 4vh;
+  }
+
+  .imagen_ProductoA {
+    size: 15vh;
+  }
+
+  #carouselBandolera {
+    display: none;
+  }
+
+  .imagen_ProductoB {
+    size: 15vh;
+  }
+
+  .descripcionC {
     display: none;
   }
 }
