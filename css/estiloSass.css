@@ -39,11 +39,13 @@
   padding: 1rem;
   bottom: 0px;
   width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .footer .navegacion {
-  display: flex;
   padding-right: 30px;
-  flex-direction: column;
 }
 
 .titulo, #grid .titulo {
@@ -253,7 +255,19 @@
   font-size: large;
 }
 
-@media screen and (max-width: 480px) {
+/*COMENTARIOS*/
+.formComen {
+  margin: 15px;
+  padding: 20px;
+  border: 1px black;
+}
+.formComen .buttonEnviar {
+  margin-top: 15px;
+  position: center;
+  padding: 12px;
+}
+
+@media screen and (max-width: 530px) {
   .headerTitle {
     font-size: larger;
     align-self: center;
@@ -274,9 +288,9 @@
   }
   #grid .imagen_modelo {
     size: 100vh;
-    margin: 0px;
-    padding: 0px;
+    margin-top: 4px;
     float: none;
+    align-items: center;
   }
 
   .mochilas {
@@ -363,6 +377,14 @@
     margin: 10px 20px;
   }
 
+  .tituloM__Descripcion {
+    text-align: left;
+  }
+
+  .tituloM {
+    text-align: left;
+  }
+
   /*INFORMACION*/
   #mapa-aspecto {
     width: 350px;
@@ -397,9 +419,13 @@
     opacity: 1;
   }
 }
-@media screen and (min-width: 560px) and (max-width: 850px) {
+@media screen and (min-width: 531px) {
   #grid {
-    grid-template-rows: 100px 2vh auto 18vh;
+    grid-template-areas: "titulo imagen_modelo" "informacion imagen_modelo";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 47px 58vh;
+    flex-direction: column;
+    padding: 0px;
   }
 
   #mochMedida {
@@ -407,6 +433,10 @@
   }
 
   #mochBolsillos {
+    display: none;
+  }
+
+  #mochV {
     display: none;
   }
 
@@ -448,4 +478,10 @@
 a {
   text-decoration: none;
   color: white;
+}
+
+@media screen and (min-width: 740px) {
+  #mochV {
+    display: block;
+  }
 }/*# sourceMappingURL=estiloSass.css.map */
