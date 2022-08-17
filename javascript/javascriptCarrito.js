@@ -3,17 +3,21 @@ sessionStorage.setItem('micarrito', JSON.stringify(carrito));
 
 //Agregado de carrito seccion mujer
 function agregarCarteraVAlCarrito(){
-    carrito = sessionStorage.getItem('miCarrito');
-    carrito = JSON.parse(carrito);
-    let productoV = [];
     let nombreDelProducto = "Cartera V";
     let cantidad = document.getElementById("cantidadCarteraV");
     let color = document.getElementById("colorCarteraV");
     let precio = 4000*cantidad;
-    productoV = { nombre: nombreDelProducto,
+    var productoV = { 
+        nombre: nombreDelProducto,
         cantidadDeCarteras: cantidad,
         coloDeCarteras: color,
-        precioDeCarteras: precio};
+        precioDeCarteras: precio
+    };
+
+    //probando objeto
+    sessionStorage.setItem('unObjeto', JSON.stringify(productoV));
+    //
+
     carrito.push(productoV);
     sessionStorage.setItem('micarrito', JSON.stringify(carrito));
 }
