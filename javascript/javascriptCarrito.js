@@ -1,4 +1,4 @@
-let carrito = {};
+let carrito = [];
 sessionStorage.setItem('micarrito', JSON.stringify(carrito));
 
 //Agregado de carrito seccion mujer
@@ -10,7 +10,10 @@ function agregarCarteraVAlCarrito(){
     let cantidad = document.getElementById("cantidadCarteraV");
     let color = document.getElementById("colorCarteraV");
     let precio = 4000*cantidad;
-    productoV = [nombreDelProducto, cantidad, color, precio];
+    productoV = { nombre: nombreDelProducto,
+        cantidadDeCarteras: cantidad,
+        coloDeCarteras: color,
+        precioDeCarteras: precio};
     carrito.push(productoV);
     sessionStorage.setItem('micarrito', JSON.stringify(carrito));
 }
