@@ -5,13 +5,13 @@ sessionStorage.setItem('micarrito', JSON.stringify(carrito));
 function agregarCarteraVAlCarrito(){
     let nombreDelProducto = "Cartera V";
 
-    let cantidad = document.getSelection("colorCarteraV");
-    let color = document.getSelection("colorCarteraV");
+    let cantidad = document.getElementById("cantidadCarteraV").onselect;
+    let color = document.getElementById("colorCarteraV").onselect;
     let precio = 4000*cantidad;
     var productoV = { 
         nombre: nombreDelProducto,
         cantidadDeCarteras: cantidad,
-        coloDeCarteras: color,
+        colorDeCarteras: color,
         precioDeCarteras: precio
     };
 
@@ -24,34 +24,50 @@ function agregarCarteraVAlCarrito(){
 }
 
 function agregarCarteraWaffleAlCarrito(){
-    let productoV;
     let nombreDelProducto = "Cartera Waffle";
-    let cantidad = document.getElementById("cantidadCarteraWaffle");
-    let color = document.getElementById("colorCarteraWaffle");
+    let cantidad = document.getElementById("cantidadCarteraWaffle").onselect;
+    let color = document.getElementById("colorCarteraWaffle").onselect;
     let precio = 3900*cantidad;
-    productoV = [nombreDelProducto, cantidad, color, precio];
+    var productoV = { 
+        nombre: nombreDelProducto,
+        cantidadDeCarteras: cantidad,
+        colorDeCarteras: color,
+        precioDeCarteras: precio
+    };
+
     carrito.push(productoV);
     sessionStorage.setItem(carrito);
 }
 
 function agregarCarteraCiervoAlCarrito(){
-    let productoV;
     let nombreDelProducto = "Cartera Ciervo";
-    let cantidad = document.getElementById("cantidadCarteraCiervo");
-    let color = document.getElementById("colorCarteraCiervo");
+    let cantidad = document.getElementById("cantidadCarteraCiervo").onselect;
+    let color = document.getElementById("colorCarteraCiervo").onselect;
     let precio = 4100*cantidad;
-    productoV = [nombreDelProducto, cantidad, color, precio];
+    var productoV = { 
+        nombre: nombreDelProducto,
+        cantidadDeCarteras: cantidad,
+        colorDeCarteras: color,
+        precioDeCarteras: precio
+    };
+
     carrito.push(productoV);
     sessionStorage.setItem(carrito);
 }
 
 function agregarCarteraCuadroAlCarrito(){
-    let productoV;
+    
     let nombreDelProducto = "Cartera Cuadros";
-    let cantidad = document.getElementById("cantidadCarteraCuadros");
-    let color = document.getElementById("colorCarteraCuadros");
+    let cantidad = document.getElementById("cantidadCarteraCuadros").onselect;
+    let color = document.getElementById("colorCarteraCuadros").onselect;
     let precio = 4000*cantidad;
-    productoV = [nombreDelProducto, cantidad, color, precio];
+    var productoV = { 
+        nombre: nombreDelProducto,
+        cantidadDeCarteras: cantidad,
+        colorDeCarteras: color,
+        precioDeCarteras: precio
+    };
+
     carrito.push(productoV);
     sessionStorage.setItem(carrito);
 }
