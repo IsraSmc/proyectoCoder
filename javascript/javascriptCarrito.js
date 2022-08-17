@@ -1,16 +1,18 @@
-let carrito = [];
-
+let carrito = {};
+sessionStorage.setItem('micarrito', JSON.stringify(carrito));
 
 //Agregado de carrito seccion mujer
 function agregarCarteraVAlCarrito(){
-    let productoV;
+    carrito = sessionStorage.getItem('miCarrito');
+    carrito = JSON.parse(carrito);
+    let productoV = [];
     let nombreDelProducto = "Cartera V";
     let cantidad = document.getElementById("cantidadCarteraV");
     let color = document.getElementById("colorCarteraV");
     let precio = 4000*cantidad;
     productoV = [nombreDelProducto, cantidad, color, precio];
     carrito.push(productoV);
-    sessionStorage.setItem(carrito);
+    sessionStorage.setItem('micarrito', JSON.stringify(carrito));
 }
 
 function agregarCarteraWaffleAlCarrito(){
@@ -48,7 +50,8 @@ function agregarCarteraCuadroAlCarrito(){
 
 //mostrar carrito
 function mostrarCarrito(){
-    let productoa = localStorage.getItem(carrito);
+    let productoa = localStorage.getItem('miCarrito');
+    productoa = JSON.parse(productoa);
     for(i=0; i <= productoa.length; i++){
         let productoX = productoa[i];
         for(x=0; x <= productoX.length; x++){
