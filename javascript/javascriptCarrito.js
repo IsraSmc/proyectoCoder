@@ -36,7 +36,7 @@ function agregarCarteraWaffleAlCarrito(){
     };
 
     carrito.push(productoV);
-    sessionStorage.setItem(carrito);
+    sessionStorage.setItem('micarrito', JSON.stringify(carrito));
 }
 
 function agregarCarteraCiervoAlCarrito(){
@@ -52,7 +52,7 @@ function agregarCarteraCiervoAlCarrito(){
     };
 
     carrito.push(productoV);
-    sessionStorage.setItem(carrito);
+    sessionStorage.setItem('micarrito', JSON.stringify(carrito));
 }
 
 function agregarCarteraCuadroAlCarrito(){
@@ -69,7 +69,7 @@ function agregarCarteraCuadroAlCarrito(){
     };
 
     carrito.push(productoV);
-    sessionStorage.setItem(carrito);
+    sessionStorage.setItem('micarrito', JSON.stringify(carrito));
 }
 
 //mostrar carrito
