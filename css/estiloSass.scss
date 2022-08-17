@@ -129,6 +129,7 @@
     padding: 5vh 2vh 5vh 2vh;
 }
 
+
 .descripcionB{
     grid-area: descripcionB;
     color: rgba(255, 255, 255, 0.733);
@@ -140,7 +141,7 @@
     grid-area: descripcionC;
     color: rgba(255, 255, 255, 0.733);
     background-color: gray;
-    padding: 3vh 2vh 3vh 2vh;
+    padding: 5vh 2vh 5vh 2vh;
 }
 
 #grillaProductos{
@@ -154,8 +155,7 @@
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 37vh 15vh;
-    grid-gap: 5vh;
-    
+    grid-gap: 4vh;
 }
 
 /* FIN DE HOMBRE */
@@ -177,10 +177,25 @@ $Cartera:(
     padding-left: $left;
 }
 
+.anadirAlCarritoCarteraV{
+    grid-area: anadirCarteraV;
+}
+
+.anadirAlCarritoCarteraWaffle{
+    grid-area: anadirCarteraWaffle;
+}
+
+.anadirAlCarritoCarteraCiervo{
+    grid-area: anadirCarteraCiervo;
+}
+
+.anadirAlCarritoCarteraCuadro{
+    grid-area: anadirCarteraCuadro;
+}
 /* Fin de atributos*/
 
 .infoM{
-    margin: 50px 200px;
+    margin: 50px 250px;
 }
 
 .carteraMujer{
@@ -205,7 +220,7 @@ $Cartera:(
             grid-area: infoDe#{$cartera};
             justify-self: right;
             line-height: 5px;
-            @include fondoBox(40px, 30px, 10.5vh)
+            @include fondoBox(40px, 30px, 35vh)
         }
     }
 
@@ -219,12 +234,15 @@ $Cartera:(
     display: grid;
     grid-template-areas: 
         "infoDeCarteraV infoDeCarteraV CarteraV"
+        "anadirCarteraV anadirCarteraV anadirCarteraV"
         "CarteraWaffle infoDeCarteraWaffle infoDeCarteraWaffle"
+        "anadirCarteraWaffle anadirCarteraWaffle anadirCarteraWaffle"
         "infoDeCarteraCiervo infoDeCarteraCiervo CarteraCiervo"
-        "CarteraCuadro infoDeCarteraCuadro infoDeCarteraCuadro";
-        
+        "anadirCarteraCiervo anadirCarteraCiervo anadirCarteraCiervo"
+        "CarteraCuadro infoDeCarteraCuadro infoDeCarteraCuadro"
+        "anadirCarteraCuadro anadirCarteraCuadro anadirCarteraCuadro";
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 250px 250px 250px 250px;
+    grid-template-rows: 250px 100px 250px 100px 250px 100px 250px 100px;
     align-items: center;
     justify-self: center;
     margin: 6%;

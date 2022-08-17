@@ -127,7 +127,7 @@
   grid-area: descripcionC;
   color: rgba(255, 255, 255, 0.733);
   background-color: gray;
-  padding: 3vh 2vh 3vh 2vh;
+  padding: 5vh 2vh 5vh 2vh;
 }
 
 #grillaProductos {
@@ -140,15 +140,31 @@
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 37vh 15vh;
-  grid-gap: 5vh;
+  grid-gap: 4vh;
 }
 
 /* FIN DE HOMBRE */
 /* Mujer */
 /*Atributos*/
+.anadirAlCarritoCarteraV {
+  grid-area: anadirCarteraV;
+}
+
+.anadirAlCarritoCarteraWaffle {
+  grid-area: anadirCarteraWaffle;
+}
+
+.anadirAlCarritoCarteraCiervo {
+  grid-area: anadirCarteraCiervo;
+}
+
+.anadirAlCarritoCarteraCuadro {
+  grid-area: anadirCarteraCuadro;
+}
+
 /* Fin de atributos*/
 .infoM {
-  margin: 50px 200px;
+  margin: 50px 250px;
 }
 
 .carteraMujer {
@@ -179,7 +195,7 @@
   background-color: gray;
   margin: 0px 0px;
   padding: 40px 30px;
-  padding-left: 10.5vh;
+  padding-left: 35vh;
 }
 
 #carouselCarteraWaffle {
@@ -210,7 +226,7 @@
   background-color: gray;
   margin: 0px 0px;
   padding: 40px 30px;
-  padding-left: 10.5vh;
+  padding-left: 35vh;
 }
 
 #carouselCarteraCuadro {
@@ -220,9 +236,9 @@
 
 #grillaProductosMujer {
   display: grid;
-  grid-template-areas: "infoDeCarteraV infoDeCarteraV CarteraV" "CarteraWaffle infoDeCarteraWaffle infoDeCarteraWaffle" "infoDeCarteraCiervo infoDeCarteraCiervo CarteraCiervo" "CarteraCuadro infoDeCarteraCuadro infoDeCarteraCuadro";
+  grid-template-areas: "infoDeCarteraV infoDeCarteraV CarteraV" "anadirCarteraV anadirCarteraV anadirCarteraV" "CarteraWaffle infoDeCarteraWaffle infoDeCarteraWaffle" "anadirCarteraWaffle anadirCarteraWaffle anadirCarteraWaffle" "infoDeCarteraCiervo infoDeCarteraCiervo CarteraCiervo" "anadirCarteraCiervo anadirCarteraCiervo anadirCarteraCiervo" "CarteraCuadro infoDeCarteraCuadro infoDeCarteraCuadro" "anadirCarteraCuadro anadirCarteraCuadro anadirCarteraCuadro";
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 250px 250px 250px 250px;
+  grid-template-rows: 250px 100px 250px 100px 250px 100px 250px 100px;
   align-items: center;
   justify-self: center;
   margin: 6%;
@@ -278,7 +294,6 @@
     font-size: larger;
     padding: 2px 7px;
   }
-
   #grid {
     grid-template-areas: "titulo" "image_modelo" "informacion";
     grid-template-columns: 1fr;
@@ -292,7 +307,6 @@
     float: none;
     align-items: center;
   }
-
   .mochilas {
     flex-direction: column;
     align-items: center;
@@ -300,7 +314,6 @@
   .mochilas .imgMochilas {
     padding-bottom: 10px;
   }
-
   /* HOMBRE */
   #grillaProductos {
     grid-template-areas: "productoA" "descripcionA" "productoB" "descripcionB" "productoC" "descripcionC";
@@ -309,28 +322,24 @@
     grid-gap: 2vh;
     margin-bottom: 7vh;
   }
-
   .descripcionA {
     padding-left: 5vh;
     padding-right: 5vh;
     padding-top: 3vh;
     padding-bottom: 3vh;
   }
-
   .descripcionB {
     padding-left: 5vh;
     padding-right: 5vh;
     padding-top: 3vh;
     padding-bottom: 3vh;
   }
-
   .descripcionC {
     padding-left: 4vh;
     padding-right: 4vh;
     padding-top: 1vh;
     padding-bottom: 2vh;
   }
-
   /*MUJER*/
   .infoDeCarteraV {
     background-color: gray;
@@ -339,7 +348,6 @@
     padding-left: 10px;
     align-self: center;
   }
-
   .infoDeCarteraWaffle {
     background-color: gray;
     margin: 0px 0px;
@@ -347,7 +355,6 @@
     padding-left: 10px;
     align-self: center;
   }
-
   .infoDeCarteraCiervo {
     background-color: gray;
     margin: 0px 0px;
@@ -355,7 +362,6 @@
     padding-left: 10px;
     align-self: center;
   }
-
   .infoDeCarteraCuadro {
     background-color: gray;
     margin: 0px 0px;
@@ -363,7 +369,6 @@
     padding-left: 10px;
     align-self: center;
   }
-
   #grillaProductosMujer {
     grid-template-areas: "CarteraV" "infoDeCarteraV" "CarteraWaffle" "infoDeCarteraWaffle" "CarteraCiervo" "infoDeCarteraCiervo" "CarteraCuadro" "infoDeCarteraCuadro";
     grid-template-columns: 1fr;
@@ -372,29 +377,23 @@
     justify-items: center;
     align-items: center;
   }
-
   .infoM {
     margin: 10px 20px;
   }
-
   .tituloM__Descripcion {
     text-align: left;
   }
-
   .tituloM {
     text-align: left;
   }
-
   /*INFORMACION*/
   #mapa-aspecto {
     width: 350px;
     height: 300px;
   }
-
   #ubicacion {
     grid-template-rows: 350px 300px;
   }
-
   .navegacion {
     display: flex;
     position: right;
@@ -427,19 +426,15 @@
     flex-direction: column;
     padding: 0px;
   }
-
   #mochMedida {
     display: none;
   }
-
   #mochBolsillos {
     display: none;
   }
-
   #mochV {
     display: none;
   }
-
   #grillaProductos {
     grid-template-areas: "productoA productoB" "descripcionA descripcionB";
     grid-template-columns: 1fr 1fr;
@@ -450,27 +445,21 @@
     justify-items: center;
     align-items: center;
   }
-
   .descripcionA {
     padding: 4vh;
   }
-
   .descripcionB {
     padding: 4vh;
   }
-
   .imagen_ProductoA {
     size: 15vh;
   }
-
   #carouselBandolera {
     display: none;
   }
-
   .imagen_ProductoB {
     size: 15vh;
   }
-
   .descripcionC {
     display: none;
   }
