@@ -1,12 +1,14 @@
 let carrito = [];
-sessionStorage.setItem('micarrito', JSON.stringify(carrito));
+let cantDeCarteraV;
+localStorage.setItem('miCarrito', JSON.stringify(carrito));
 
 //Agregado de carrito seccion mujer
 function agregarCarteraVAlCarrito(){
     let nombreDelProducto = "Cartera V";
-
-    let cantidad = document.getElementById("cantidadCarteraV").onselect;
-    let color = document.getElementById("colorCarteraV").onselect;
+    let c = document.getElementById("cantidadCarteraV");
+    let cantidad = c.options[c.selectedIndex].innerText;
+    let colour = document.getElementById("colorCarteraV");
+    let color = colour.options[colour.selectedIndex].innerText;
     let precio = 4000*cantidad;
     var productoV = { 
         nombre: nombreDelProducto,
@@ -15,18 +17,19 @@ function agregarCarteraVAlCarrito(){
         precioDeCarteras: precio
     };
 
-    //probando objeto
-    sessionStorage.setItem('unObjeto', JSON.stringify(productoV));
-    //
-
-    carrito.push(productoV);
-    sessionStorage.setItem('micarrito', JSON.stringify(carrito));
-}
+    carrito.push(productoV); 
+    localStorage.setItem('miCarrito', JSON.stringify(carrito));
+} 
+/* 
+[{"nombre":"Cartera V","colorDeCarteras":{"0":{},"1":{},"2":{},"3":{}},"precioDeCarteras":null}]
+*/
 
 function agregarCarteraWaffleAlCarrito(){
     let nombreDelProducto = "Cartera Waffle";
-    let cantidad = document.getElementById("cantidadCarteraWaffle").onselect;
-    let color = document.getElementById("colorCarteraWaffle").onselect;
+    let c = document.getElementById("cantidadCarteraWaffle");
+    let cantidad = c.options[c.selectedIndex].innerText;
+    let colour = document.getElementById("colorCarteraWaffle");
+    let color = colour.options[colour.selectedIndex].innerText;
     let precio = 3900*cantidad;
     var productoV = { 
         nombre: nombreDelProducto,
@@ -36,13 +39,15 @@ function agregarCarteraWaffleAlCarrito(){
     };
 
     carrito.push(productoV);
-    sessionStorage.setItem('micarrito', JSON.stringify(carrito));
+    localStorage.setItem('miCarrito', JSON.stringify(carrito));
 }
 
 function agregarCarteraCiervoAlCarrito(){
     let nombreDelProducto = "Cartera Ciervo";
-    let cantidad = document.getElementById("cantidadCarteraCiervo").onselect;
-    let color = document.getElementById("colorCarteraCiervo").onselect;
+    let c = document.getElementById("cantidadCarteraCiervo");
+    let cantidad = c.options[c.selectedIndex].innerText;
+    let colour = document.getElementById("colorCarteraCiervo");
+    let color = colour.options[colour.selectedIndex].innerText;
     let precio = 4100*cantidad;
     var productoV = { 
         nombre: nombreDelProducto,
@@ -52,14 +57,16 @@ function agregarCarteraCiervoAlCarrito(){
     };
 
     carrito.push(productoV);
-    sessionStorage.setItem('micarrito', JSON.stringify(carrito));
+    localStorage.setItem('miCarrito', JSON.stringify(carrito));
 }
 
 function agregarCarteraCuadroAlCarrito(){
     
     let nombreDelProducto = "Cartera Cuadros";
-    let cantidad = document.getElementById("cantidadCarteraCuadros").onselect;
-    let color = document.getElementById("colorCarteraCuadros").onselect;
+    let c = document.getElementById("cantidadCarteraCuadro");
+    let cantidad = c.options[c.selectedIndex].innerText;
+    let colour = document.getElementById("colorCarteraCuadro");
+    let color = colour.options[colour.selectedIndex].innerText;
     let precio = 4000*cantidad;
     var productoV = { 
         nombre: nombreDelProducto,
@@ -69,17 +76,22 @@ function agregarCarteraCuadroAlCarrito(){
     };
 
     carrito.push(productoV);
-    sessionStorage.setItem('micarrito', JSON.stringify(carrito));
+    localStorage.setItem('miCarrito', JSON.stringify(carrito));
 }
 
 //mostrar carrito
 function mostrarCarrito(){
-    let productoa = localStorage.getItem('miCarrito');
+    let productoa = [];
+    let stringDeCarrito = document.getElementById("carrito");
+    productoa = localStorage.getItem('miCarrito');
     productoa = JSON.parse(productoa);
     for(i=0; i <= productoa.length; i++){
-        let productoX = productoa[i];
-        for(x=0; x <= productoX.length; x++){
-            alert(productoX[x]);
-        }
+        stringDeCarrito.innerText = productoa[i].nombre + " Cantidad: " +
+        productoa[i].cantidadDeCarteras + " Color: " + 
+        productoa[i].colorDeCarteras + " Precio: " + 
+        productoa[i].precioDeCarteras;
     }
 }
+/*
+[{"nombre":"Cartera V","cantidadDeCarteras":0,"colorDeCarteras":null,"precioDeCarteras":0}]
+*/
