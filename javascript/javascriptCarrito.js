@@ -6,74 +6,114 @@ localStorage.setItem('miCarrito', JSON.stringify(carrito));
 function agregarCarteraVAlCarrito(){
     let nombreDelProducto = "Cartera V";
     let c = document.getElementById("cantidadCarteraV");
-    let cantidad = c.options[c.selectedIndex].innerText;
-    let colour = document.getElementById("colorCarteraV");
-    let color = colour.options[colour.selectedIndex].innerText;
-    let precio = 4000*cantidad;
-    var productoV = { 
-        nombre: nombreDelProducto,
-        cantidadDeCarteras: cantidad,
-        colorDeCarteras: color,
-        precioDeCarteras: precio
-    };
+    if(c.options[c.selectedIndex].index == 0){
+        Swal.fire("Error","Seleccione una cantidad", "error");
+    }
+    else{
+        let cantidad = c.options[c.selectedIndex].innerText;
+        let colour = document.getElementById("colorCarteraV");
+        if(colour.options[colour.selectedIndex].index == 0){
+            Swal.fire("Error","Seleccione un color", "error");
+        }
+        else{
+            let color = colour.options[colour.selectedIndex].innerText;
+            let precio = 4000*cantidad;
+            var productoV = { 
+                nombre: nombreDelProducto,
+                cantidadDeCarteras: cantidad,
+                colorDeCarteras: color,
+                precioDeCarteras: precio
+            };
 
-    carrito.push(productoV); 
-    localStorage.setItem('miCarrito', JSON.stringify(carrito));
-} 
-/* 
-[{"nombre":"Cartera V","colorDeCarteras":{"0":{},"1":{},"2":{},"3":{}},"precioDeCarteras":null}]
-*/
+            carrito.push(productoV); 
+            localStorage.setItem('miCarrito', JSON.stringify(carrito));
+        }
+    }
+}
 
 function agregarCarteraWaffleAlCarrito(){
     let nombreDelProducto = "Cartera Waffle";
     let c = document.getElementById("cantidadCarteraWaffle");
-    let cantidad = c.options[c.selectedIndex].innerText;
-    let colour = document.getElementById("colorCarteraWaffle");
-    let color = colour.options[colour.selectedIndex].innerText;
-    let precio = 3900*cantidad;
-    var productoV = { 
-        nombre: nombreDelProducto,
-        cantidadDeCarteras: cantidad,
-        colorDeCarteras: color,
-        precioDeCarteras: precio
-    };
+    if(c.options[c.selectedIndex].index == 0){
+        Swal.fire("Error","Seleccione una cantidad", "error");
+    }
+    else{
+        let cantidad = c.options[c.selectedIndex].innerText;
+        let colour = document.getElementById("colorCarteraWaffle");
+        if(colour.options[colour.selectedIndex].index == 0){
+            Swal.fire("Error","Seleccione un color", "error");
+        }
+        else{
+            let color = colour.options[colour.selectedIndex].innerText;
+            let precio = 4000*cantidad;
+            var productoV = { 
+                nombre: nombreDelProducto,
+                cantidadDeCarteras: cantidad,
+                colorDeCarteras: color,
+                precioDeCarteras: precio
+            };
 
-    carrito.push(productoV);
-    localStorage.setItem('miCarrito', JSON.stringify(carrito));
+            carrito.push(productoV); 
+            localStorage.setItem('miCarrito', JSON.stringify(carrito));
+        }
+    }
 }
 
 function agregarCarteraCiervoAlCarrito(){
     let nombreDelProducto = "Cartera Ciervo";
     let c = document.getElementById("cantidadCarteraCiervo");
-    let cantidad = c.options[c.selectedIndex].innerText;
-    let colour = document.getElementById("colorCarteraCiervo");
-    let color = colour.options[colour.selectedIndex].innerText;
-    let precio = 4100*cantidad;
-    var productoV = { 
-        nombre: nombreDelProducto,
-        cantidadDeCarteras: cantidad,
-        colorDeCarteras: color,
-        precioDeCarteras: precio
-    };
+    if(c.options[c.selectedIndex].index == 0){
+        Swal.fire("Error","Seleccione una cantidad", "error");
+    }
+    else{
+        let cantidad = c.options[c.selectedIndex].innerText;
+        let colour = document.getElementById("colorCarteraCiervo");
+        if(colour.options[colour.selectedIndex].index == 0){
+            Swal.fire("Error","Seleccione un color", "error");
+        }
+        else{
+            let color = colour.options[colour.selectedIndex].innerText;
+            let precio = 4000*cantidad;
+            var productoV = { 
+                nombre: nombreDelProducto,
+                cantidadDeCarteras: cantidad,
+                colorDeCarteras: color,
+                precioDeCarteras: precio
+            };
 
-    carrito.push(productoV);
-    localStorage.setItem('miCarrito', JSON.stringify(carrito));
+            carrito.push(productoV); 
+            localStorage.setItem('miCarrito', JSON.stringify(carrito));
+        }
+    }
 }
 
 function agregarCarteraCuadroAlCarrito(){
     
     let nombreDelProducto = "Cartera Cuadros";
     let c = document.getElementById("cantidadCarteraCuadro");
-    let cantidad = c.options[c.selectedIndex].innerText;
-    let colour = document.getElementById("colorCarteraCuadro");
-    let color = colour.options[colour.selectedIndex].innerText;
-    let precio = 4000*cantidad;
-    var productoV = { 
-        nombre: nombreDelProducto,
-        cantidadDeCarteras: cantidad,
-        colorDeCarteras: color,
-        precioDeCarteras: precio
-    };
+    if(c.options[c.selectedIndex].index == 0){
+        Swal.fire("Error","Seleccione una cantidad", "error");
+    }
+    else{
+        let cantidad = c.options[c.selectedIndex].innerText;
+        let colour = document.getElementById("colorCarteraCuadro");
+        if(colour.options[colour.selectedIndex].index == 0){
+            Swal.fire("Error","Seleccione un color", "error");
+        }
+        else{
+            let color = colour.options[colour.selectedIndex].innerText;
+            let precio = 4000*cantidad;
+            var productoV = { 
+                nombre: nombreDelProducto,
+                cantidadDeCarteras: cantidad,
+                colorDeCarteras: color,
+                precioDeCarteras: precio
+            };
+
+            carrito.push(productoV); 
+            localStorage.setItem('miCarrito', JSON.stringify(carrito));
+        }
+    }
 
     carrito.push(productoV);
     localStorage.setItem('miCarrito', JSON.stringify(carrito));
@@ -81,16 +121,15 @@ function agregarCarteraCuadroAlCarrito(){
 
 //mostrar carrito
 function mostrarCarrito(){
-    let productoa = [];
-    let stringDeCarrito = document.getElementById("carrito");
-    productoa = localStorage.getItem('miCarrito');
-    productoa = JSON.parse(productoa);
-    for(i=0; i <= productoa.length; i++){
-        stringDeCarrito.innerText = productoa[i].nombre + " Cantidad: " +
-        productoa[i].cantidadDeCarteras + " Color: " + 
-        productoa[i].colorDeCarteras + " Precio: " + 
-        productoa[i].precioDeCarteras;
+    carrito = localStorage.getItem('miCarrito');
+    let stringDeCarrito = document.getElementById('carrito');
+    for(i=0; i <= carrito.length; i++){
+        stringDeCarrito.innerText = carrito[i].nombre + " Cantidad: " +
+        carrito[i].cantidadDeCarteras + " Color: " + 
+        carrito[i].colorDeCarteras + " Precio: " + 
+        carrito[i].precioDeCarteras + "\n";
     }
+
 }
 /*
 [{"nombre":"Cartera V","cantidadDeCarteras":0,"colorDeCarteras":null,"precioDeCarteras":0}]
