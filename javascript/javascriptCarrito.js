@@ -27,6 +27,7 @@ function agregarCarteraVAlCarrito(){
 
             carrito.push(productoV); 
             localStorage.setItem('miCarrito', JSON.stringify(carrito));
+            enviarDatos(carrito);
         }
     }
 }
@@ -55,6 +56,7 @@ function agregarCarteraWaffleAlCarrito(){
 
             carrito.push(productoV); 
             localStorage.setItem('miCarrito', JSON.stringify(carrito));
+            enviarDatos(carrito);
         }
     }
 }
@@ -83,6 +85,7 @@ function agregarCarteraCiervoAlCarrito(){
 
             carrito.push(productoV); 
             localStorage.setItem('miCarrito', JSON.stringify(carrito));
+            enviarDatos(carrito);
         }
     }
 }
@@ -117,6 +120,7 @@ function agregarCarteraCuadroAlCarrito(){
 
     carrito.push(productoV);
     localStorage.setItem('miCarrito', JSON.stringify(carrito));
+    enviarDatos(carrito);
 }
 
 //mostrar carrito
@@ -130,6 +134,27 @@ function mostrarCarrito(){
         carrito[i].precioDeCarteras + "\n";
     }
 
+}
+
+function enviarDatos(lista){
+    const enviarAURL = "https://jsonplaceholder.typicode.com/posts";
+    const nuevoPost = {
+        userId:1,
+        id: 2,
+        tittle:"Lista de carrito",
+        body: JSON.stringify(lista)
+    }
+    fetch(enviarAURL,{
+        method:'POST',
+        body: JSON.stringify(nuevoPost),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        Swal.fire("Datos enviados");
+    })
 }
 /*
 [{"nombre":"Cartera V","cantidadDeCarteras":0,"colorDeCarteras":null,"precioDeCarteras":0}]
