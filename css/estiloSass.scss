@@ -61,38 +61,6 @@
     padding-left: 15px;
 }
 
-/* Index */
-#grid{
-    display: grid;
-    grid-template-areas: 
-        "titulo imagen_modelo"
-        "informacion imagen_modelo";
-    
-    grid-template-columns: auto 22rem;
-    grid-template-rows: 2.5rem 29rem;
-    margin-bottom: 20px;
-
-    .titulo{
-        @extend .titulo;
-        grid-area: titulo;
-    }
-
-    .imagen_modelo{ 
-        width: 22rem;
-        float: right;
-        grid-area: imagen_modelo;
-        -webkit-animation: imagen_modelo 1.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-        animation: imagen_modelo 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-        position:initial;
-        margin-top: 0px;
-    }
-
-    .informacion{
-        margin-top: 8vh;
-        grid-area: informacion;
-    }
-}
-
 .mochilas{
     display: flex;
     flex-direction: row;

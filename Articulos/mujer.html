@@ -32,13 +32,70 @@
                             <a class="nav-link" href="../Comentarios/comentarios.html">COMENTARIOS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Carrito/carrito.html">CARRITO</a>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="mostrarCarrito()">
+                                Carrito
+                            </button>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="tableCarrito">
+                        <thead>
+                            <tr>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Color</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody id="items"></tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Terminar compra</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+
+    <!--  <div class="modal" id="modalCarrito" tabindex="-1" aria-labelledby="modalCarritoLabel" aria-hidden="true">
+        <div class="modalConteiner">
+            <div class="modalHeader">
+                <h4 class="modalTittle">Carrito</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modalBody">
+                <table class="tableCarrito">
+                    <thead>
+                        <tr>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Color</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="items"></tbody>
+                </table>
+            </div>
+            <div class="modalFooter">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <a href="./mujer.html" id="fin" class="btn btn-secondary">Terminar compra</a>
+            </div>
+        </div>
+    </div>-->
 
     <div>
         <h2 class="titulo"> Mujer </h2>

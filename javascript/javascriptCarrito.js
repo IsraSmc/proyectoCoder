@@ -2,6 +2,8 @@ let carrito = [];
 let cantDeCarteraV;
 localStorage.setItem('miCarrito', JSON.stringify(carrito));
 
+mostrarCarrito();
+
 //Agregado de carrito seccion mujer
 function agregarCarteraVAlCarrito(){
     let nombreDelProducto = "Cartera V";
@@ -125,15 +127,19 @@ function agregarCarteraCuadroAlCarrito(){
 
 //mostrar carrito
 function mostrarCarrito(){
-    carrito = localStorage.getItem('miCarrito');
-    let stringDeCarrito = document.getElementById('carrito');
-    for(i=0; i <= carrito.length; i++){
-        stringDeCarrito.innerText = carrito[i].nombre + " Cantidad: " +
-        carrito[i].cantidadDeCarteras + " Color: " + 
-        carrito[i].colorDeCarteras + " Precio: " + 
-        carrito[i].precioDeCarteras + "\n";
-    }
+    let precioFinal = 0;
+    carrito.forEach((productoDeCarrito) => {
+            let carritoTable = document.createElement("tr");
+            carritoTable.id = `fila${productoDeCarrito.nombreDelProducto}`;
+            carritoTable.innerHTML += `
+                <td>${productoDeCarrito.nombreDelProducto}</td>
+                <td><input id="cantidad-producto-${productoDeCarrito.nombreDelProducto}" type="number" value="${productoDeCarrito.cantidad}" min="1" max="50" step="1" </td>
+                <td>${productoDeCarrito.color}</td>
+                <td>${productoDeCarrito.precio}</td>`
 
+            precioFinal += productoDeCarrito.precio;
+            }
+    );
 }
 
 function enviarDatos(lista){
